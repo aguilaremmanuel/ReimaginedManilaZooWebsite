@@ -1,0 +1,354 @@
+* {  
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif; 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map-content{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#map-logo img{
+    height: 75px;
+    width: auto;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#map-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 15px;
+}
+
+#map {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+#map-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34, 156, 167, 0.9);
+    cursor: move;
+    cursor: -webkit-grab;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#map-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#map-image {
+    width: 85%;
+    height: 85%;
+    background-image: url('../images/map-images/manila-zoo-map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 110px;
+    left: 220px;
+    transition: transform 0.3s ease;
+    transform-origin: center left;
+}
+
+#zoom-controls {
+    position: fixed;
+    top: 160px;
+    left: 185px;  
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#zoom-controls button {
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#zoom-controls #zoom-in {
+    background-color: #1D2C32;
+    color: #fff;
+}
+
+#zoom-controls #zoom-out {
+    background-color: #2d5658;
+    color: #ccc;
+}
+
+#zoom-controls #zoom-in:hover {
+    background-color: #142126;
+}
+
+#zoom-controls #zoom-out:hover {
+    background-color: #244a4c;
+}
+
+#map-toggles {
+    position: fixed;
+    top: 190px;
+    left: 910px;
+}
+
+#map-toggles button {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1D2C32;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#map-toggles #all-toggle i {
+    color: #F7A832;
+}
+
+#map-toggles #attraction-toggle i {
+    color: #AB48B0;
+}
+
+#map-toggles #shop-toggle i {
+    color: #ce1b1b;
+}
+
+#map-toggles #restroom-toggle i {
+    color: #0569a7;
+}
+
+#map-toggles #habitat-toggle i {
+    color: #45BCC8;
+}
+
+#map-toggles button:hover {
+    background-color: #2d5658;
+}
+
+.marker-show-effect {
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.marker-show-effect.show {
+    transform: scale(1);
+}
+
+.marker_inner {
+    position: absolute;
+    top: -35px; 
+    left: auto;  
+    width: auto;  
+    background-color: rgba(29, 44, 50, 0.7);  
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 7px;   
+    border-radius: 5px;
+    text-align: center;
+    display: none; 
+}
+
+.marker:hover .marker_inner {
+    display: block; 
+}
+
+.marker.icon.restroom:hover, .marker.icon.shop:hover, .marker.icon.habitat:hover, .marker.icon.attraction:hover {
+    transform: scale(1.1);
+}
+
+.marker.icon.habitat {
+    position: absolute;
+    width: 28px; 
+    height: 28px; 
+    background-color: #45BCC8; 
+    border-radius: 50%; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker.icon.habitat i {
+    color: #fff; 
+    font-size: 14px; 
+}
+
+.marker.icon.attraction {
+    position: absolute;
+    width: 28px; 
+    height: 28px; 
+    background-color: #AB48B0; 
+    border-radius: 50%; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker.icon.attraction i {
+    color: #fff; 
+    font-size: 14px; 
+}
+
+.marker.icon.restroom {
+    position: absolute;
+    width: 28px; 
+    height: 28px; 
+    background-color: #0569a7; 
+    border-radius: 50%; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker.icon.restroom i {
+    color: #fff; 
+    font-size: 14px; 
+}
+
+.marker.icon.shop {
+    position: absolute;
+    width: 28px; 
+    height: 28px; 
+    background-color: #ce1b1b; 
+    border-radius: 50%; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker.icon.shop i {
+    color: #fff; 
+    font-size: 14px; 
+}
+
+@media screen and (max-width: 1395px) {
+    #map-toggles {
+        position: fixed;
+        top: 160px;
+        left: 850px;
+    }
+}
+
+@keyframes slideInFromBelow {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.marker_info {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    background-color: #1D2C32;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    animation: slideInFromBelow 0.3s ease-in-out; /* Apply animation here */
+}
+
+.marker_info .image img {
+    height: 250px;
+    width: auto;
+    border-radius: 20px 0 0 0;;
+}
+
+.marker_info .marker_info_inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.marker_info .image {
+    margin-right: 10px;
+}
+
+.marker_info .text {
+    flex: 1;
+    text-align: left;
+    padding: 5px 5px 5px 22px;
+}
+
+.marker_info .title {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.marker_info .subtitle {
+    font-weight: 600;
+    color: #fff;
+}
+
+.marker_info .description {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.marker_info .close_button i {
+    cursor: pointer;
+    color: #fff;
+    margin-right: 20px;
+    margin-bottom: 180px;
+    font-size: 32px;
+    border-radius: 50%;
+    display: block;
+}
+
+.marker_info .close_button i:hover {
+    transform: scale(1.1);
+}
+
+.marker_info.open {
+    display: block;
+}

@@ -1,0 +1,11 @@
+{
+    "REG-MNL": 300,
+    "REG-NON-MNL": 300,
+    "STUD-MNL": 100,
+    "STUD-NON-MNL": 200,
+    "SC-PWD-MNL": 120,
+    "SC-PWD-NON-MNL": 240,
+    "CHLDRN": 0,
+    "MNL-EMP": 100,
+    "OTHER-CITIZEN": 0
+}

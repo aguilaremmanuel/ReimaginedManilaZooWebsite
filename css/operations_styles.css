@@ -1,0 +1,162 @@
+
+.show-operational-events-container {
+    margin: 40px 100px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 480px;
+}
+
+.show-operational-events-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #45BCC8;
+    color: white;
+    height: 50px;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    height: 46px;
+}
+
+tr:nth-child(even) {
+    background-color: #E5F6F8;
+  }
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #E5F6F8;
+}
+
+.add-operation-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 190px;
+    background-color: rgb(49, 188, 49);
+    margin-left: 100px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+}
+
+.add-operation-btn i {
+    margin-right: 10px;
+}
+
+.add-operation-modal, .confirm-cancel-operation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.add-operation-container, .confirm-cancel-operation-container  {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.addd-operation-container label {
+    font-size: 15px;
+    color: #017DD6;
+    font-weight: bold;
+}
+
+.add-operation-container select,
+.add-operation-container input[type="date"],
+.add-operation-container input[type="text"]{
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(55, 55, 55);
+    border-radius: 7px;
+}
+
+#operationDate, #operationType, #specifiedOperation {
+    width: 100%;
+}
+
+.add-operation-action-container, .cancel-operation-action-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.generate-btn, .yes-btn {
+    background-color: #017DD6;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.yes-btn {
+    background-color: red;
+}
+
+.add-operation-action-container .cancel-btn, .no-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #017DD6;
+    color: #017DD6;
+    font-weight: bold;
+    font-size: 14px;
+    height: 35px;
+    width: 90px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.no-btn {
+    border: 1px solid rgb(59, 58, 58);
+    color: rgb(59, 58, 58);
+}
+
+#cancelOperationBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    height: 25px;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#cancelOperationBtn i {
+    margin-right: 8px;
+}

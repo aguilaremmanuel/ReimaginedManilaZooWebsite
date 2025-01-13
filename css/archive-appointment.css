@@ -1,0 +1,88 @@
+#archivePast {
+    border-left: 5px solid blue;
+}
+
+/* Popup CSS */
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    height: 230px;
+    width: 365px;
+    border: 1px solid rgb(191, 189, 189);
+}
+
+.popup-content label {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: block;
+    color: #c20c0c;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: auto;
+}
+
+.popup-content input {
+    display: block;
+    background-color: #f0f0f0; /* Light grey background */
+    border: 1px solid #cccccc; /* Grey border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Some padding */
+    color: #333333; /* Text color */
+    width: 100%; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 16px;
+    text-align: center;
+    cursor: auto;
+}
+
+.action-container-delete {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+}
+
+.action-container-delete button {
+    background-color: red;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#deleteCancel {
+    background-color: white;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-right: 10px;
+    border: 1px solid #333333;
+}
+
+.popup-content .close {
+    float: right;
+    cursor: pointer;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+}
+

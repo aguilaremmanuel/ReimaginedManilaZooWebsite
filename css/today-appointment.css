@@ -1,0 +1,348 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+
+.admin-action-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    height: 52px;
+    width: 450px
+}
+
+.search-container input {
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+    border:none;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.search-container i {
+    opacity: 70%;
+}
+
+.search-container input:focus {
+    outline: none;
+  }
+
+.archive-btn-container div, .delete-btn-container div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+    background-color: rgb(222, 0, 0);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.archive-record i {
+    margin-left: 20px;
+}
+
+.confirm-container {
+    display: none;
+    width: 300px;
+    height: 130px;
+    background-color: #d6d4d4; /* for visibility */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.confirm-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+}
+
+.confirm-container .buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+}
+
+.confirm-container .cancel-btn, .confirm-container .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+}
+
+.confirm-container .cancel-btn {
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.confirm-container .submit-btn {
+    border: none;
+    color: white;
+    background-color: rgb(222, 0, 0);
+}
+
+.confirm-btn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.table-container {
+    overflow-x: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 500px; /* Adjust based on your needs */
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1em;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    height: 60px;
+}
+
+th {
+    background-color: #45BCC8;
+    color: white;
+}
+
+td:nth-child(1) {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #E5F6F8;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #E5F6F8;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 8% auto; 
+    height: 420px;
+    width: 500px;
+    border-radius: 20px;
+    border: 1px solid rgb(191, 189, 189);
+}
+
+.close-container i{
+    color: #aaaaaa;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-content h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    color: #017DD6;
+    font-size: 20px;
+}
+
+.td-container {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 55px;
+}
+
+.td-container label {
+    color: #017DD6;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: auto;
+}
+
+.td-container span {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: auto;
+}
+.td-container span {
+    float: right;
+}
+
+.generate-receipt-container {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    justify-content: right;
+    padding-right: 22px;
+}
+
+.generate-receipt-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: green;
+    height: 50px;
+    width: 230px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: underline;
+}
+
+
+.generate-receipt-container button i {
+    margin-right: 5px;
+}
+
+.generate-receipt-container button:hover {
+    color: rgb(4, 66, 4);
+}
+
+
+.date-cont {
+    display: flex;
+}
+
+.date-cont i {
+    margin-left: 10px;
+    color: #E6001C;
+    cursor: pointer;
+}
+
+.date-cont i:hover {
+    color: #a10719;
+}
+
+.close-container i:hover,
+.close-container i:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-date-content {
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: fixed; 
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    height: 230px;
+    width: 365px;
+    border: 1px solid rgb(191, 189, 189);
+}
+
+.edit-date-content form {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.edit-date-content .action-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.edit-date-content .form-content {
+    text-align: left;
+}
+
+.edit-date-content label {
+    color: #017DD6;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: auto;
+}
+
+#dateInput {
+    background-color: #f0f0f0; /* Light grey background */
+    border: 1px solid #cccccc; /* Grey border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Some padding */
+    color: #333333; /* Text color */
+    width: 320px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.action-container input, #cancel-edit-date-btn {
+    background-color: #017DD6;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+} 
+
+
+#cancel-edit-date-btn {
+    background-color: white;
+    color: #017DD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border: 1px solid #017DD6;
+}

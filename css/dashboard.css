@@ -1,0 +1,271 @@
+
+.data-container {
+    padding-left: 50px;
+}
+
+#table {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.date-container {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    background-color: #45BCC8; 
+    color: white;
+}
+
+#currentDate {
+    font-size: 24px;
+}
+
+#calendar-icon {
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+}
+
+.data-container {
+    display: block;
+}
+
+.total-container {
+    height: 150px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.total {
+    display: block;
+    height: 120px;
+    width: 400px;
+}
+
+.total-box {
+    width: 100%;
+    height: 68%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.label {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: 8px;
+    color: #fff;
+}
+
+.data-body-container {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cont-for-all {
+    width: 320px;
+    height: 100px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.cont-box, .total-box {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: #E5F6F8;
+    border-radius: 10px;
+    font-size: 23px;
+    color: rgb(42, 41, 41);
+}
+
+.cont-box i, .total-box i {
+    font-size: 30px;
+}
+
+.choose-analytics-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.choose-analytics-container {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.choose-analytics-container label {
+    font-size: 15px;
+    color: #017DD6;
+    font-weight: bold;
+}
+
+.choose-analytics-container select, 
+.choose-analytics-container input[type="number"],
+.choose-analytics-container input[type="date"]{
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(55, 55, 55);
+    border-radius: 7px;
+}
+
+#chooseAnalytics, #dateForDaily, #monthForMonthly, #yearForMonthly, #yearForYearly {
+    width: 100%;
+}
+
+.choose-analytics-action-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.generate-btn {
+    background-color: #017DD6;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.choose-analytics-action-container .cancel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #017DD6;
+    color: #017DD6;
+    font-weight: bold;
+    font-size: 14px;
+    height: 35px;
+    width: 90px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#analytics-whole-main {
+    background-color: #05042d;
+}
+
+.for-centering-analytics {
+    display: flex;
+    height: 600px;
+}
+
+.show-analytics-container {
+    width: 100%;
+    height: 500px;
+}
+
+.show-analytics-btn {
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 13px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.graph-container {
+    display: flex;
+    align-items: flex-end;
+    height: 500px; /* Adjust based on your needs */
+    width: 60%;
+    background-color: #05042d;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    margin: 40px;
+    margin-bottom: 0;
+  }
+  .bar {
+    width: 50px; /* Adjust based on your needs */
+    margin-right: 10px;
+    background-color: #4CAF50;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .graph-container .label {
+    margin-right: 40px;
+    margin-top: 5px;
+    font-size: 12px;
+    width: 40px;
+    color: rgb(183, 195, 242);
+    text-align: left;
+  }
+  .legend {
+    padding-top: 20px;
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-left: 40px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .ticket-summary-container {
+    position: fixed;
+    color: white;
+    right: 180px;
+    top: 200px;
+  }
+
+  .ticket-summary-container div{
+    margin-bottom: 10px;
+  }
+
+  #totalEarnings {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #ticketSummayHead {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
